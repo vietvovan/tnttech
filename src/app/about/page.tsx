@@ -24,16 +24,21 @@ export default function About() {
                 Lịch sử hình thành
               </h2>
               <p className="text-gray-600 mb-4">
-                Công ty chúng tôi được thành lập vào năm 2010, với sứ mệnh mang đến những giải pháp công nghệ
-                tiên tiến cho doanh nghiệp Việt Nam. Trải qua hơn 10 năm phát triển, chúng tôi đã trở thành
+                Được thành lập vào năm 2020, TNT tự hào là đối tác tin cậy của các tổ chức và doanh nghiệp trong hành trình chuyển đổi số. Trải qua hơn 5 năm phát triển, chúng tôi đã trở thành
                 một trong những đơn vị hàng đầu trong lĩnh vực chuyển đổi số.
               </p>
               <p className="text-gray-600">
-                Từ một công ty nhỏ với 5 nhân viên, đến nay chúng tôi đã có hơn 200 nhân viên và văn phòng
-                tại 3 thành phố lớn: Hà Nội, Đà Nẵng và TP.HCM.
+                Với đội ngũ trẻ nhiệt huyết và luôn sẵn sàng, chúng tôi chuyên cung cấp các giải pháp toàn diện cho việc thu thập, tạo lập, và khai thác dữ liệu số, giúp khách hàng tận dụng tối đa tiềm năng của dữ liệu trong thời đại số hóa.
               </p>
             </div>
-            <div className="bg-gray-200 h-96 rounded-lg"></div>
+            <div className="bg-gray-200 h-96 rounded-lg">
+            <img
+                src="/images/services/history.jpg"
+                alt="company"
+                className="w-full h-full object-cover"
+                sizes='(max-width: 100%)'
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -46,8 +51,7 @@ export default function About() {
                 Sứ mệnh
               </h2>
               <p className="text-gray-600">
-                Chúng tôi cam kết mang đến những giải pháp công nghệ hiện đại, giúp doanh nghiệp tối ưu hóa
-                quy trình làm việc, nâng cao hiệu suất và tăng trưởng bền vững.
+                Trong giai đoạn phát triển tiếp theo, TNT xác định sứ mệnh của mình là trở thành đối tác cung cấp các dịch vụ số hoá cho tổ chức, doanh nghiệp để góp phần mang lại thành công và gia tăng giá trị cho khách hàng trong xu thế chuyển đổi số và tạo dựng nền kinh tế số tại Việt Nam.
               </p>
             </div>
             <div>
