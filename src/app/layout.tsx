@@ -46,12 +46,15 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <body className={inter.className}>
-        <header className="bg-white shadow-md font-bold" style={{ color: theme.colors.text.primary }}>
+        <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md font-bold" style={{ color: theme.colors.text.primary }}>
           <nav className="container mx-auto px-4 py-2">
             <div className="flex justify-between items-center">
-              <Link href="/" className="text-2xl font-bold">
-                <img src="/logo.png" alt="Logo" className="w-12 h-12" />
-              </Link>
+              <div>
+                <Link href="/" className="flex items-center font-bold">
+                  <img src="/logo.png" alt="Logo" className="w-12 h-12" />
+                  <span className="text-[#ED2C2C]">Tech</span>
+                </Link>
+              </div>
               <div className="space-x-6">
                 <Link href="/" className="hover:text-blue-600">
                   Trang chủ
@@ -82,34 +85,40 @@ export default function RootLayout({
             </div>
           </nav>
         </header>
-        <main className="container mx-auto px-4 py-8" style={{ minHeight: "calc(100vh - 64px - 212px)" }}>
+        
+        <main className="container mx-auto mt-16 px-4 py-8" style={{ minHeight: "calc(100vh - 64px - 212px)" }}>
           {children}
         </main>
-        <footer className="bg-gray-800 text-white">
-          <div className="container mx-auto px-4 py-8">
+
+        <footer className="text-white" style={{ backgroundColor: theme.colors.background.gray }}>
+          <div className="container mx-auto px-4 pt-8 pb-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
-                <h3 className="text-xl font-bold mb-4">Về chúng tôi</h3>
-                <p>Công ty của chúng tôi cam kết mang đến những sản phẩm và dịch vụ chất lượng cao.</p>
+                <Link href="/" className="flex items-center font-bold">
+                  <img src="/logo.png" alt="Logo" className="w-24 h-24" />
+                  <span className="text-[#ED2C2C] text-[32px]">Tech</span>
+                </Link>
+                <p className="mt-4 text-[18px]">CÔNG TY CỔ PHẦN XÂY DỰNG VÀ PHÁT TRIỂN CÔNG NGHỆ TNT</p>
               </div>
               <div>
                 <h3 className="text-xl font-bold mb-4">Liên hệ</h3>
-                <p>Email: info@company.com</p>
+                <p>Tên viết tắt: TNTG.,JSC</p>
+                <p>Mã số DN: 0109431558</p>
+                <p>Email: info.tnttech@gmail.com</p>
                 <p>Điện thoại: (84) 123-456-789</p>
               </div>
               <div>
                 <h3 className="text-xl font-bold mb-4">Địa chỉ</h3>
-                <p>123 Đường ABC, Quận XYZ</p>
-                <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+                <p>Số 7B1, ngách 79/6 đường Dương Quảng Hàm, Phường Quan Hoa, Quận Cầu Giấy, Thành phố Hà Nội, Việt Nam</p>
               </div>
             </div>
             <div className="text-center mt-8">
-              <p>&copy; 2024 Công Ty Của Chúng Tôi. All rights reserved.</p>
+              <p>&copy; 2025 TNTTech. All rights reserved.</p>
             </div>
           </div>
         </footer>
 
-        <div className="fixed bottom-8 right-8 flex flex-col space-y-4">
+        <div className="fixed bottom-4 right-4 flex flex-col space-y-2 z-50">
           <a
             href="https://zalo.me/your-zalo-id"
             target="_blank"
