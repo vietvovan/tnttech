@@ -1,4 +1,4 @@
-import { createServer } from 'http'
+const { createServer } = require('http');
 import { parse } from 'url'
 import next from 'next'
 
