@@ -12,6 +12,7 @@ export const theme = {
       primary: '#ffffff',
       secondary: '#f3f4f6',
       dark: '#1f2937',
+      gray: '#37383C'
     },
   },
   fonts: {
