@@ -1,6 +1,8 @@
+import {create} from "domain";
+
 const { createServer } = require('http');
-import { parse } from 'url'
-import next from 'next'
+const { parse } = require('url');
+const next = require('next')
 
 const port = parseInt(process.env.PORT || '3000', 10)
 const dev = process.env.NODE_ENV !== 'production'
