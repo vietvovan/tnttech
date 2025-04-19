@@ -80,12 +80,24 @@ export default function ContactPage() {
             </h2>
             <div className="space-y-4">
               <div>
+                <h3 className="font-medium">Tên công ty</h3>
+                <p className="text-gray-600">CÔNG TY CỔ PHẦN XÂY DỰNG VÀ PHÁT TRIỂN CÔNG NGHỆ TNT</p>
+              </div>
+              <div>
+                <h3 className="font-medium">Tên viết tắt</h3>
+                <p className="text-gray-600">TNTG.,JSC</p>
+              </div>
+              <div>
+                <h3 className="font-medium">Mã số DN</h3>
+                <p className="text-gray-600">0109431558</p>
+              </div>
+              <div>
                 <h3 className="font-medium">Địa chỉ</h3>
-                <p className="text-gray-600">123 Đường ABC, Quận XYZ, TP. Hồ Chí Minh</p>
+                <p className="text-gray-600">Số 7B1, ngách 79/6 đường Dương Quảng Hàm, Phường Quan Hoa, Quận Cầu Giấy, Thành phố Hà Nội, Việt Nam.</p>
               </div>
               <div>
                 <h3 className="font-medium">Email</h3>
-                <p className="text-gray-600">contact@example.com</p>
+                <p className="text-gray-600">info.tnttech@gmail.com</p>
               </div>
               <div>
                 <h3 className="font-medium">Điện thoại</h3>
@@ -100,7 +112,7 @@ export default function ContactPage() {
 
           <div className="mt-8 bg-white rounded-lg shadow-lg overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4241674197956!2d106.69877!3d10.775844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDQ2JzM1LjgiTiAxMDbCsDQxJzU1LjYiRQ!5e0!3m2!1svi!2s!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.9431276742202!2d105.796196476902!3d21.034961487562406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab475afd74af%3A0x2b0302f7070b612c!2zTmcuIDc5IFAuIMSQLiBRdeG6o25nIEjDoG0sIFF1YW4gSG9hLCBD4bqndSBHaeG6pXksIEjDoCBO4buZaSwgVmlldG5hbQ!5e0!3m2!1sen!2sus!4v1745069903057!5m2!1sen!2sus"
               width="100%"
               height="300"
               style={{ border: 0 }}
@@ -113,7 +125,7 @@ export default function ContactPage() {
 
         <div className="bg-white rounded-lg shadow-lg p-8">
           <h2 className="text-2xl font-semibold mb-6" style={{ color: theme.colors.primary }}>
-            Gửi tin nhắn
+            Điền thông tin và liên hệ với chúng tôi
           </h2>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
@@ -126,8 +138,9 @@ export default function ContactPage() {
                 name="name"
                 required
                 value={formData.name}
+                placeholder="Nhập họ và tên"
                 onChange={handleChange}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                className="h-[50px] mt-1 p-2 block w-full rounded-md border-gray-300 shadow-md hover:border-blue-500 focus:border-blue-500 focus:ring-blue-500"
               />
             </div>
 
@@ -141,8 +154,9 @@ export default function ContactPage() {
                 name="email"
                 required
                 value={formData.email}
+                placeholder="Nhập email"
                 onChange={handleChange}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                className="mt-1 h-[50px] p-2 block w-full rounded-md border-gray-300 shadow-md focus:border-blue-500 focus:ring-blue-500"
               />
             </div>
 
@@ -155,8 +169,9 @@ export default function ContactPage() {
                 id="phone"
                 name="phone"
                 value={formData.phone}
+                placeholder="Nhập số điện thoại"
                 onChange={handleChange}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                className="mt-1 h-[50px] p-2 block w-full rounded-md border-gray-300 shadow-md focus:border-blue-500 focus:ring-blue-500"
               />
             </div>
 
@@ -168,20 +183,20 @@ export default function ContactPage() {
                 id="message"
                 name="message"
                 required
-                rows={4}
+                rows={8}
                 value={formData.message}
+                placeholder="Nhập nội dung tin nhắn"
                 onChange={handleChange}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-md focus:border-blue-500 focus:ring-blue-500"
               />
             </div>
 
             {status.type && (
               <div
-                className={`p-4 rounded-md ${
-                  status.type === "success"
-                    ? "bg-green-50 text-green-700"
-                    : "bg-red-50 text-red-700"
-                }`}
+                className={`p-4 rounded-md ${status.type === "success"
+                  ? "bg-green-50 text-green-700"
+                  : "bg-red-50 text-red-700"
+                  }`}
               >
                 {status.message}
               </div>
@@ -191,8 +206,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
-              >
+                className="w-full flex justify-center h-[46px] py-2 px-4 border border-transparent rounded-md shadow-sm text-lg font-bold text-white bg-blue-600 cursor-pointer hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed">
                 {isSubmitting ? "Đang gửi..." : "Gửi tin nhắn"}
               </button>
             </div>

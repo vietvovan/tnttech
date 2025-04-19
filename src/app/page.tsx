@@ -3,6 +3,7 @@
 import { TypeAnimation } from 'react-type-animation';
 import Link from "next/link";
 import Image from "next/image";
+import { theme } from "@/config/theme";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -89,9 +90,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-16 mt-8">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Tại sao chọn chúng tôi?</h2>
+          <h2 className="text-3xl font-bold text-center mb-12" style={{ color: theme.colors.primary }}>Tại sao chọn chúng tôi?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-6">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -99,7 +100,7 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Dịch vụ chất lượng cao</h3>
+              <h3 className="text-xl font-semibold mb-2" style={{ color: theme.colors.primary }}>Dịch vụ chất lượng cao</h3>
               <p className="text-gray-600">Cung cấp giải pháp nhanh chóng và hiệu quả cho doanh nghiệp của bạn</p>
             </div>
             <div className="text-center p-6">
@@ -108,7 +109,7 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Uy tín, tận tâm</h3>
+              <h3 className="text-xl font-semibold mb-2" style={{ color: theme.colors.primary }}>Uy tín, tận tâm</h3>
               <p className="text-gray-600">Uy tín và tận tâm là tiền đề để khách hàng mua sự tin tưởng và hài lòng</p>
             </div>
             <div className="text-center p-6">
@@ -117,16 +118,16 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Hỗ trợ nhanh chóng</h3>
+              <h3 className="text-xl font-semibold mb-2" style={{ color: theme.colors.primary }}>Hỗ trợ nhanh chóng</h3>
               <p className="text-gray-600">Đội ngũ hỗ trợ chuyên nghiệp luôn sẵn sàng phục vụ</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 mt-8 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Lĩnh vực kinh doanh</h2>
+          <h2 className="text-4xl font-bold text-center mb-12" style={{ color: theme.colors.primary }}>Lĩnh vực kinh doanh</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -193,7 +194,7 @@ export default function Home() {
               <Link
                 key={index}
                 href={service.href}
-                className="group bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+                className="group bg-white rounded-lg shadow-xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
               >
                 <div className="p-6">
                   <div className="mb-4 transform transition-transform duration-300 group-hover:scale-110">
@@ -220,8 +221,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative py-16 bg-white overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600">
+      <section className="relative py-16 mt-8 bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600">
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10">
@@ -332,7 +333,7 @@ export default function Home() {
                       <div className="text-sm">Dự án hoàn thành</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-4xl font-bold">10+</div>
+                      <div className="text-4xl font-bold">5+</div>
                       <div className="text-sm">Năm kinh nghiệm</div>
                     </div>
                   </div>

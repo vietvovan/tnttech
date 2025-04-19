@@ -6,7 +6,7 @@ const transporter = nodemailer.createTransport({
   service: 'gmail', 
   auth: {
     user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASSWORD, // Mật khẩu ứng dụng từ Gmail
+    pass: process.env.EMAIL_PASSWORD,
   },
 });
 
@@ -25,7 +25,7 @@ export async function POST(request: Request) {
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER, 
-      subject: `Tin nhắn liên hệ mới từ ${name}`,
+      subject: `[tnttech.info] Thông tin người dùng "${name}"`,
       text: `
         Tên: ${name}
         Email: ${email}
@@ -33,7 +33,7 @@ export async function POST(request: Request) {
         Nội dung: ${message}
       `,
       html: `
-        <h2>Tin nhắn liên hệ mới</h2>
+        <h2>Thông tin của người dùng "${name}" được gửi từ trang web tnttech.info</h2>
         <p><strong>Tên:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Số điện thoại:</strong> ${phone || 'Không có'}</p>
